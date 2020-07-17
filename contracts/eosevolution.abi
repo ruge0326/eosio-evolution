@@ -19,7 +19,7 @@
             ]
         },
         {
-            "name": "genetic_world",
+            "name": "living_being",
             "base": "",
             "fields": [
                 {
@@ -27,12 +27,38 @@
                     "type": "name"
                 },
                 {
-                    "name": "genes",
-                    "type": "string"
+                    "name": "genesa",
+                    "type": "uint32"
                 },
                 {
-                    "name": "generation",
+                    "name": "genesb",
+                    "type": "uint32"
+                },
+                {
+                    "name": "genesc",
+                    "type": "uint32"
+                },
+                {
+                    "name": "genesd",
+                    "type": "uint32"
+                },
+                {
+                    "name": "kind",
+                    "type": "uint32"
+                },
+                {
+                    "name": "birth_date",
                     "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "time",
+            "base": "",
+            "fields": [
+                {
+                    "name": "max",
+                    "type": "int32"
                 }
             ]
         }
@@ -47,12 +73,17 @@
             "name": "create",
             "type": "create",
             "ricardian_contract": ""
+        },
+        {
+            "name": "time",
+            "type": "time",
+            "ricardian_contract": ""
         }
     ],
     "tables": [
         {
-            "name": "world",
-            "type": "genetic_world",
+            "name": "population",
+            "type": "living_being",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
