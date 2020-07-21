@@ -10,3 +10,7 @@ EOSIO Evolution Game
 ```
 eosio-cpp -abigen -I include -R resource -contract eosevolution -o eosevolution.wasm src/eosevolution.cpp
 ```
+
+### Random in EOSIO
+
+[](How to implement a pseudo ramdon algorithm)
