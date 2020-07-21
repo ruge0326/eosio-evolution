@@ -13,4 +13,4 @@ eosio-cpp -abigen -I include -R resource -contract eosevolution -o eosevolution.
 
 ### Random in EOSIO
 
-[](How to implement a pseudo ramdon algorithm)
+[https://github.com/rubenabix/eosio-evolution/blob/master/contracts/docs/Random_EOSIO.pdf](How to implement a pseudo ramdon algorithm)
