@@ -1,20 +1,16 @@
 #include <eosevolution.hpp>
 
 uint64_t eosevolution::getRandom(int max) {
-  uint32_t tbn = eosio::tapos_block_num();
-  eosio::print(":tbn:");
-  eosio::print(tbn);
-  uint32_t tbp = eosio::tapos_block_prefix();
-  eosio::print(":tbp:");
-  eosio::print(tbp);
-  uint32_t block = tbn ^ tbp;
-  uint32_t block_time = eosio::current_time_point().sec_since_epoch();
-  eosio::print(":block_time:");
-  eosio::print(block_time);
-  uint64_t random = random = ((((uint64_t)block_time<<32) | block) % max) + 1;
+  uint64_t A = eosio::tapos_block_num();
+  uint64_t B = eosio::tapos_block_prefix();
+  uint64_t C = A ^ B;
+  uint64_t D = eosio::current_time_point().sec_since_epoch();
+  uint64_t E = D<<32;
+  uint64_t F = (C | E);
+  uint64_t G = (F % max) + 1;
   eosio::print(":random:");
-  eosio::print(random);
-  return random;
+  eosio::print(G);
+  return G;
 }
 
 

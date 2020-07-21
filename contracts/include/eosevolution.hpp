@@ -16,6 +16,7 @@ using namespace eosio;
 CONTRACT eosevolution : public contract
 {
 public:
+
   using contract::contract;
 
   ACTION create(name account);
